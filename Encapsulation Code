@@ -102,6 +102,7 @@ Console.WriteLine(fighter.charLevel);//using charLevel because level is private 
 gigi.HeroSound();
 slooth.HeroSound();
 chad.HeroSound();
+fighter.HeroSound();
 }
 
 }
