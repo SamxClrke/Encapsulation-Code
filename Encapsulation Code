@@ -27,21 +27,21 @@ Console.WriteLine("\nThe Hero whispers something");
 }
 }
 //A class the inherits from the Hero class
-class Rouge : Hero{
-public int size;
+class Ranger : Hero{
+public int height;
 //polymorphism notice the override keyword
 public override void HeroSound()
 {
-Console.WriteLine("\nThe Rouge says: sneaky");
+Console.WriteLine("\nThe Ranger says: sneaky");
 }
 }
 //another class that takes info from the main hero class
-class Tank : Hero{
-public int Strength;
+class Magic : Hero{
+public int Mana;
 
 public override void HeroSound()
 {
-Console.WriteLine("\nThe Tank says: go");
+Console.WriteLine("\nThe Magic says: poof");
 }
 }
 
@@ -65,28 +65,28 @@ Console.WriteLine(gigi.charLevel);
 
 
 Console.WriteLine("\n ---------------------------------- \n");
-//an instance of a rouge class using vars from both classes
-Rouge slooth = new Rouge();
-slooth.name = "Kat";
+//another version of the ranger class using vars from both classes
+Ranger slooth = new Ranger();
+slooth.name = "Arrow";
 Console.WriteLine(slooth.name);
-slooth.desc = "a description of the Kat";
+slooth.desc = "a description of the Arrow";
 Console.WriteLine(slooth.desc);
 slooth.charLevel = 15;
 Console.WriteLine(slooth.charLevel);//using charLevel instead of level becuase level is private
 
 
 Console.WriteLine("\n ---------------------------------- \n");
-//an instance of a Tank class using vars from both classes
-Tank chad = new Tank();
-chad.name = "Chad";
-Console.WriteLine(chad.name);
-chad.desc = "a description of Chad";
-Console.WriteLine(chad.desc);
-chad.charLevel = 10;
-Console.WriteLine(chad.charLevel);//using charLevel instead of level becuase level is private
-chad.Strength = 20;
-Console.WriteLine(chad.Strength);
-//outlines the strength characteristic within the tank class
+//an instance of a Magic class using vars from both classes
+Magic mage = new Magic();
+magic.name = "Mage";
+Console.WriteLine(mage.name);
+mage.desc = "a description of Mage";
+Console.WriteLine(mage.desc);
+mage.charLevel = 16;
+Console.WriteLine(mage.charLevel);//using charLevel instead of level becuase level is private
+mage.mana = 24;
+Console.WriteLine(mage.Mana);
+//outlines the mana characteristic within the mage class
 
 Console.WriteLine("\n ---------------------------------- \n");
 //a creation of a third class melee using vars from the previous classes
@@ -101,7 +101,7 @@ Console.WriteLine(fighter.charLevel);//using charLevel because level is private 
 //calling the same function from each class and seeing the difference
 gigi.HeroSound();
 slooth.HeroSound();
-chad.HeroSound();
+magic.HeroSound();
 fighter.HeroSound();
 }
 
